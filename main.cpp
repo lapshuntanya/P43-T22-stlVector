@@ -1,7 +1,12 @@
-#include "Vector.h"
+//#include "Vector.h"
+#include <vector>
+#include <algorithm>
+#include <iostream>
+using namespace  std;
 
 int main() {
 
+    /*
     Vector<int> a; //size = 0, arr = nullptr
     a.push_back(3);
     a.push_back(9);
@@ -26,7 +31,27 @@ int main() {
 
     a.print();
     b.print();
-    k.print();
+    k.print();*/
+
+   /* vector<int> v1; //size = 0
+    for (int i = 0; i < 10; ++i) {
+        v1.push_back(rand()%100 - 10);
+    }
+    //v1.size() => 10
+
+    //Обробка вектору
+    for (int i = 0; i < v1.size(); ++i) {
+        cout << v1[i] << " ";
+    }cout << endl;
+
+    vector<int>::iterator it;
+    for(it = v1.begin(); it != v1.end(); it++)
+        cout << *it << " ";
+    cout << endl;
+
+    for(auto& item: v1){ // for(int item: v1)     for(auto item: v1)
+        cout << item << " ";
+    }cout << endl; */
 
     return 0;
 }
