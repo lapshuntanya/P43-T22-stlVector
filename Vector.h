@@ -55,6 +55,10 @@ public:
         if( arr != nullptr) delete[] arr;
         arr = tmp;
     }
+
+    Type& operator[](int number){
+        return arr[number];
+    }
 };
 
 
