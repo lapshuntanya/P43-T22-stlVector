@@ -18,7 +18,6 @@ public:
         size = 0;
         arr = nullptr;
     }
-
     Vector(int _size, Type value){ //_size = 4, value = 1
         size = _size;
         arr = new Type[size]; // [ _ _ _ _ ]
@@ -26,7 +25,6 @@ public:
             arr[i] = value; // [ 1 1 1 1 ]
         }
     }
-
     ~Vector(){
         if(size > 0) delete[] arr;
 
@@ -44,6 +42,19 @@ public:
         }
     }
 
+    void push_back(Type value){
+        Type* tmp = new Type[size + 1];
+
+        for (int i = 0; i < size; ++i) {
+            tmp[i] = arr[i];
+        }
+
+        size++;
+        tmp[size - 1] = value;
+
+        if( arr != nullptr) delete[] arr;
+        arr = tmp;
+    }
 };
 
 
